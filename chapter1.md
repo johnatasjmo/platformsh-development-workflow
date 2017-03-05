@@ -35,12 +35,13 @@ delete files on drupal/
 
 Platform on local machine  
 Platform on VM  
-  Install platform on vagrant ssh  
-`  go to home/vagrant  
-  curl -sS `[`https://platform.sh/cli/installer`](https://platform.sh/cli/installer)` | php  
+  Install platform on vagrant ss
+
+`cd home/vagrant    
+  curl -sS`[`https://platform.sh/cli/installer`](https://platform.sh/cli/installer\)` | php  
   chmod 777 .platformsh  
-  curl -sS `[`https://platform.sh/cli/installer`](https://platform.sh/cli/installer)` | php  
-  source ~/.profile  
+  curl -sS `[`https://platform.sh/cli/installer`]\(https://platform.sh/cli/installer)`| php    
+  source ~/.profile    
   platform`
 
 ## Git
@@ -62,11 +63,10 @@ create local.settings.php
   drush cget system.site  
   get default\_config\_hash code and copy
 
-`settings['hash_salt'] = 'AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo';  
+`settings['hash_salt'] = 'AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo';    
 config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';`
 
-  
-  add hash and config  
+add hash and config  
   note You should never commit a settings.local.php file to your repository. The file will always be overwritten by Platform.sh \(when using the drupal build flavor\).
 
 move config
@@ -86,9 +86,9 @@ create with platform:branch Test
 
 Files  
 RSYNC  
-[http://www.tecmint.com/rsync-local-remote-file-synchronization-commands/](http://www.tecmint.com/rsync-local-remote-file-synchronization-commands/)  
-rsync -r my/local/files/. \[PROJECT-ID\]-\[ENV\]@ssh.\[REGION\].platform.sh:public/sites/default/files/  
-[https://docs.platform.sh/frameworks/drupal7/migrating.html](https://docs.platform.sh/frameworks/drupal7/migrating.html)  
+[http://www.tecmint.com/rsync-local-remote-file-synchronization-commands/](http://www.tecmint.com/rsync-local-remote-file-synchronization-commands/\)  
+rsync -r my/local/files/. [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh:public/sites/default/files/  
+[https://docs.platform.sh/frameworks/drupal7/migrating.html]\(https://docs.platform.sh/frameworks/drupal7/migrating.html)  
 comment: Hey, instead of -r, you probably want to use -aPv  
 without drush  
   hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh  
