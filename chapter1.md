@@ -37,11 +37,11 @@ Platform on local machine
 Platform on VM  
   Install platform on vagrant ss
 
-`cd home/vagrant      
+`cd home/vagrant        
 curl -sS`[`https://platform.sh/cli/installer`](https://platform.sh/cli/installer\)` | php  
   chmod 777 .platformsh  
-  curl -sS `[`https://platform.sh/cli/installer`]\(https://platform.sh/cli/installer)`| php      
-source ~/.profile      
+  curl -sS `[`https://platform.sh/cli/installer`]\(https://platform.sh/cli/installer)`| php        
+source ~/.profile        
 platform`
 
 ## Git
@@ -63,7 +63,7 @@ create local.settings.php
   drush cget system.site  
   get default\_config\_hash code and copy
 
-`settings['hash_salt'] = 'AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo';      
+`settings['hash_salt'] = 'myhash';        
 config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';`
 
 add hash and config  
