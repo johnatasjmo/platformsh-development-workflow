@@ -1,3 +1,12 @@
-# First Chapter
+# Initial Set Up
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+### Drupal VM
+
+### platform.sh
+
+### Bitbucket
+
+### platform.sh and Bitbucket integration
+
+
+

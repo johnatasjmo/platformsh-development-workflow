@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [First Chapter](chapter1.md)
-* [first article](first-article.md)
-* [second article](second-article.md)
+* [Initial Set Up](chapter1.md)
+* [Development workflow](first-article.md)
+* [Additional resources](second-article.md)
 
