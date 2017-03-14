@@ -16,11 +16,32 @@ The following is a guide for web development with Drupal 8 using the following t
 
 # Requirements
 
-* Bitbucket account
-* platform.sh account
-* Local installation with Drupal VM
-* Drush on local machine
-* Drupal console on local machine
+Cloud accounts
+
+* Bitbucket
+* platform.sh
+
+On local machine
+
+* Source Tree
+* Platform CLI
+* Drupal VM
+* Drush
+* Drupal Console
+
+Platform CLI
+
+Platform CLI must be installed in local machine and virtual machine
+
+```bash
+vagrant ssh
+cd home/vagrant        
+curl -sS`[`https://platform.sh/cli/installer`](https://platform.sh/cli/installer\)` | php  
+chmod 777 .platformsh  
+curl -sS `[`https://platform.sh/cli/installer`]\(https://platform.sh/cli/installer)`| php        
+source ~/.profile
+platform
+```
 
 
 
