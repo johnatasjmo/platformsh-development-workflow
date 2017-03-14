@@ -8,13 +8,56 @@
 
 ### As Developer
 
-1. Sync user-story from parent branch
-2. Pull code locally
-3. Pull files locally
-4. Pull DB locally
-5. Code
-6. Commit
-7. Push to bitbucket
+Once user story is assigned, identify the branch
+
+##### Checkout
+
+```
+platform environment:syncronize
+platform tunnel:open
+```
+
+##### Pull code
+
+```
+platform local:build
+git status
+```
+
+##### Pull DB
+
+```
+drush sql-sync @master-branch @self -y && drush cr
+```
+
+##### Pull files
+
+```
+drush rsync  @drupal.my-branch:%files @self:%files
+```
+
+##### Code and commit
+
+```
+git add -A
+git commit -m "some code done"
+```
+
+##### Optional - export configuration and commit
+
+```
+drush cex -y
+git add -A
+git  commit -m "configuration exported"
+```
+
+##### Push
+
+```
+platform snapshot:create
+git push bitbucket
+platform snapshot:create
+```
 
 
 

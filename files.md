@@ -28,8 +28,6 @@ rsync -r files/. hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh:web/sites/defau
 rsync -r --delete files/. hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh:web/sites/default/files/
 ```
 
-
-
 ### with drush
 
 ```

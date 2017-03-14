@@ -32,17 +32,7 @@ On local machine
 * Drush \(in local machine and VM\)
 * Drupal Console \(in local machine and VM\)
 
-### Platform CLI in Vagrant VM
-
-```bash
-vagrant ssh
-cd home/vagrant        
-curl -sS`[`https://platform.sh/cli/installer`](https://platform.sh/cli/installer\)` | php  
-chmod 777 .platformsh  
-curl -sS `[`https://platform.sh/cli/installer`]\(https://platform.sh/cli/installer)`| php        
-source ~/.profile
-platform
-```
+### 
 
 
 

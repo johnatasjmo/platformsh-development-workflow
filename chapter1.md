@@ -11,11 +11,9 @@ Create an account on [https://platform.sh/](https://platform.sh/) and initiate a
 On local machine
 
 ```
-
 platform get \[project-id\] \[folder-name\]
 cd drupal
 platform build
-
 ```
 
 create local.settings.php and add drupal VM credentials
@@ -35,6 +33,18 @@ Copy contents to settings.local.php
 
 > note You should never commit a settings.local.php file to your repository. The file will always be overwritten by Platform.sh \(when using the drupal build flavor\).
 
+### Platform CLI in Vagrant VM
+
+```bash
+  vagrant ssh
+  cd home/vagrant
+  curl -sS https://platform.sh/cli/installer | php
+  chmod 777 .platformsh
+  curl -sS https://platform.sh/cli/installer | php
+  source ~/.profile
+  platform
+```
+
 ### Bitbucket
 
 Create an account on [https://bitbucket.org/](https://bitbucket.org/) and an empty repo
@@ -48,13 +58,7 @@ git remote add bitbucket https://avalanchaa@bitbucket.org/avalanchaa/couriersh.g
 git remote -v
 ```
 
-
-
 ### platform.sh and Bitbucket integration
 
 Go to bitbucket and add platform sh as integration and select your new project
-
-
-
-
 
