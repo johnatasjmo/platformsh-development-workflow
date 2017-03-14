@@ -29,9 +29,7 @@ On local machine
 * Drush
 * Drupal Console
 
-Platform CLI
-
-Platform CLI must be installed in local machine and virtual machine
+### Platform CLI in Vagrant VM
 
 ```bash
 vagrant ssh
@@ -42,8 +40,6 @@ curl -sS `[`https://platform.sh/cli/installer`]\(https://platform.sh/cli/install
 source ~/.profile
 platform
 ```
-
-
 
 
 
