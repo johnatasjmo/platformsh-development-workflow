@@ -1,150 +1,64 @@
-# About
-
-Following process is a guide for Drupal 8 development using Drupal VM locally and platform.sh
-
-The following is an unofficial guide
-
-# Preparation
-
-Installed on local machine
-
-* Vagrant
-* Virtual Box
-* Drupal VM [Drupal VM](https://www.drupalvm.com/)
-* Platfrom CLI
-* Git
-* Source Tree
-
-Accounts on cloud
-
-* Bitbucket
-* platform.sh
-
-# Local Machine
+# Initial Set Up
 
 ### Drupal VM
 
-copy settings.php  
-delete files on drupal/
+Follow instructions as per [https://www.drupalvm.com/](https://www.drupalvm.com/) and initiate a VM
 
-#### DEBUG local Drupal VM
+### platform.sh
 
-[http://pimpmylog.couriersh.dev/](http://pimpmylog.couriersh.dev/)
+Create an account on [https://platform.sh/](https://platform.sh/) and initiate a project
 
-## Platform CLI
+On local machine
 
-Platform on local machine  
-Platform on VM  
-  Install platform on vagrant ss
+```
+platform get \[project-id\] \[folder-name\]
+cd drupal
+platform build
+```
 
-`cd home/vagrant        
-curl -sS`[`https://platform.sh/cli/installer`](https://platform.sh/cli/installer\)` | php  
-  chmod 777 .platformsh  
-  curl -sS `[`https://platform.sh/cli/installer`]\(https://platform.sh/cli/installer)`| php        
-source ~/.profile        
-platform`
+create local.settings.php and add drupal VM credentials
 
-## Git
+add hash by going to vagrant ssh and type
 
-Git ignore files
+```
+drush cget system.site
 
-# First deployment
+get default\_config\_hash code and copy
+```
 
-## Create site on platform.sh
+Copy contents to settings.local.php
 
-Create a site on platform.sh web  
-Build on local machine  
-  platform get \[project-id\] \[folder-name\]  
-  cd drupal  
-  platform build  
-create local.settings.php  
-  local settings go to settings.local.php  
-  add hash by going to vagrant ssh and type  
-  drush cget system.site  
-  get default\_config\_hash code and copy
+    `settings['hash_salt'] = 'myhash';        
+    config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';` 
 
-`settings['hash_salt'] = 'myhash';        
-config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';`
+> note You should never commit a settings.local.php file to your repository. The file will always be overwritten by Platform.sh \(when using the drupal build flavor\).
 
-add hash and config  
-  note You should never commit a settings.local.php file to your repository. The file will always be overwritten by Platform.sh \(when using the drupal build flavor\).
+### Platform CLI in Vagrant VM
 
-move config
+```bash
+  vagrant ssh
+  cd home/vagrant
+  curl -sS https://platform.sh/cli/installer | php
+  chmod 777 .platformsh
+  curl -sS https://platform.sh/cli/installer | php
+  source ~/.profile
+  platform
+```
 
-## Add remote bitbucket
+### Bitbucket
 
-Add remote on bitbucket  
-  git remote add bitbucket [https://avalanchaa@bitbucket.org/avalanchaa/couriersh.git](https://avalanchaa@bitbucket.org/avalanchaa/couriersh.git)  
-Integration bitbucket with platform.sh  
-First commit
+Create an account on [https://bitbucket.org/](https://bitbucket.org/) and an empty repo
 
-## Create test branch
+Get the bitbucket url
 
-create with platform:branch Test
+On local machine
 
-## Working with files
+```
+git remote add bitbucket https://avalanchaa@bitbucket.org/avalanchaa/couriersh.git
+git remote -v
+```
 
-Files  
-RSYNC  
-[http://www.tecmint.com/rsync-local-remote-file-synchronization-commands/](http://www.tecmint.com/rsync-local-remote-file-synchronization-commands/\)  
-rsync -r my/local/files/. [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh:public/sites/default/files/  
-[https://docs.platform.sh/frameworks/drupal7/migrating.html]\(https://docs.platform.sh/frameworks/drupal7/migrating.html)  
-comment: Hey, instead of -r, you probably want to use -aPv  
-without drush  
-  hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh  
-  Go to your default folder on local machine!  
-  rsync -r files/. \[SSH-URL\]:public/sites/default/files/
+### platform.sh and Bitbucket integration
 
-# to sync from local to remote, not delete files not present on remote
-
-rsync -r files/. hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh:web/sites/default/files/
-
-# to sync form local to remote, delete files on remote not present in local
-
-rsync -r --delete files/. hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh:web/sites/default/files/  
-with drush  
-  drush rsync @platform.\_local:%files @platform.master:%files  
-  drush rsync @self:%files @drupal.dev001:%files  
-  drush rsync -s --delete @self:%files @drupal.dev001:%files
-
-## Working with DB
-
-# DRUSH
-
-local:drush-aliases  
-drush sql-sync @source @target  
-drush sql-sync @platform.master @platform.\_local  
-drush sql-sync @self  @drupal.dev001  
-drush sql-sync @drupal.dev001 @self
-
-Drush aliases for Courier \(hne3vvou3repg\):  
-    @drupal.\_local  
-    @drupal.dev001  
-    @drupal.dev002  
-    @drupal.master
-
-# with drush on platform sh and backup
-
-ssh b5ciwn3jjhwsg-dev001-hcarzeq@ssh.us.platform.sh  
-cd web  
-drush sql-dump &gt; ../drush-backups/drushdumpjmo.sql  
-exit  
-scp b5ciwn3jjhwsg-dev001-hcarzeq@ssh.us.platform.sh:~/drush-backups/drushdumpjmo.sql ~/sites/
-
-# Collaborate with other developers
-
-## Add permissions on bitbucket
-
-## Add persmissions on platform.sh
-
-# Worflow
-
-1. Create a Sprint
-2. Create a Branch
-3. Create a Story
-4. Sync
-   How to do configuration-management
-   How to move DB up
-
-
+Go to bitbucket and add platform sh as integration and select your new project
 

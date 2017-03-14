@@ -1,26 +1,63 @@
-# jhjgl
+# Development workflow
 
-## jhkl
+### As Senior developer
 
-### jhkljhjkl
+1. Create a Master Branch
+2. Create a Test Branch
+3. Create a User-Story from Test Branch and assign to developer
 
-#### jkhjk
+### As Developer
 
+Once user story is assigned, identify the branch
 
+##### Checkout
 
-> `hjklhj`
+```
+platform environment:syncronize
+platform tunnel:open
+```
 
+##### Pull code
 
+```
+platform local:build
+git status
+```
 
-#### hjkhjhljhjklhkjl
+##### Pull DB
 
-`jhjkhjkh`
+```
+drush sql-sync @master-branch @self -y && drush cr
+```
 
-jhlkjhk
+##### Pull files
 
-![](/assets/Screen Shot 2017-02-27 at 5.29.44 AM.png)
+```
+drush rsync  @drupal.my-branch:%files @self:%files
+```
 
+##### Code and commit
 
+```
+git add -A
+git commit -m "some code done"
+```
+
+##### Optional - export configuration and commit
+
+```
+drush cex -y
+git add -A
+git  commit -m "configuration exported"
+```
+
+##### Push
+
+```
+platform snapshot:create
+git push bitbucket
+platform snapshot:create
+```
 
 
 
