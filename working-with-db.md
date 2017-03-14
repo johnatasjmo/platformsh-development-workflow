@@ -5,27 +5,24 @@
 Get your drush aliases
 
 ```
-
+local:drush-aliases
 ```
 
-local:drush-aliases  
+using sql-sync on local root or vagrant VM
 
-drush sql-sync @source @target  
-
-drush sql-sync @platform.master @platform.\\_local  
-
-drush sql-sync @self  @drupal.dev001  
-
+```
+drush sql-sync @source @target
+drush sql-sync @platform.master @platform.\_local
+drush sql-sync @self  @drupal.dev001
 drush sql-sync @drupal.dev001 @self
-
-
+```
 
 ### with Drush sql-dump
 
 ```
 ssh b5ciwn3jjhwsg-dev001-hcarzeq@ssh.us.platform.sh  
 cd web  
-drush sql-dump &gt; ../drush-backups/drushdump.sql  
+drush sql-dump &gt; ../drush-backups/drushdump.sql
 ```
 
 On Vagrant VM

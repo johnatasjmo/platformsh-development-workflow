@@ -4,9 +4,12 @@ The following is a guide for web development with Drupal 8 using the following t
 
 * Drupal VM for local development
 * Git repository using Bitbucket
-* All codes goes via git push to Bitbucket and deployed in platform.sh
+* Bitbucket integration with platform.sh - push code to Bitbucket and automatic deploy in platform.sh
 * Github workflow, one branch per user-story, one environment per branch
 * Everything in Master branch is deployable
+* Code goes upstream
+* DB goes downstream
+* Drupal 8 configuration must be exported and commited
 
 # Roles
 
@@ -24,10 +27,10 @@ Cloud accounts
 On local machine
 
 * Source Tree
-* Platform CLI
+* Platform CLI \(in local machine and VM\)
 * Drupal VM
-* Drush
-* Drupal Console
+* Drush \(in local machine and VM\)
+* Drupal Console \(in local machine and VM\)
 
 ### Platform CLI in Vagrant VM
 
