@@ -3,9 +3,9 @@
 ### Create a branch as child of master \(one per user-story\)
 
 ```bash
-platform environment:checkout parent-branch // checkout parent branch
+platform environment:checkout PARENT-BRANCH // checkout parent branch
 platform  // check which branch are you in parent-branch
-platform environment:branch child-branch //creates a new branch as child of parent (1 min process)
+platform environment:branch CHILD-BRANCH //creates a new branch as child of parent (1 min process)
 platform
 git status
 git commit --allow-empty -m "branch created" // bookmark
