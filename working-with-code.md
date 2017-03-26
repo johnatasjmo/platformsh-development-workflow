@@ -15,15 +15,15 @@ platform snapshot:create
 
 ### Merge a branch
 
- XXXXX?????XXXXXX
+XXXXX?????XXXXXX
 
 ### Delete a branch
 
 On local machine, the following code force deletes a local branch and pushes to bitbucket
 
 ```
-git branch -D <branch_name>
-git push bitbucket --delete <branch_name>
+git branch -D BRANCHNAME
+git push bitbucket --delete BRANCHNAME
 ```
 
 ### Export configuration from local to platform
