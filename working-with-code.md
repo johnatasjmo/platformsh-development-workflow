@@ -43,7 +43,7 @@ platform snapshot:create
 On local machine with config-merge \(testing\)
 
 ```
-drush @drupal.export config-merge @self --git --branch=export
+drush @drupal.MY-BRANCH config-merge @self --git --branch=export
 ```
 
 
