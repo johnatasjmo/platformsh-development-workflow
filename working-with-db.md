@@ -24,7 +24,7 @@ drush sql-sync @drupal.MY-BRANCH @self
     drush sql-dump &gt; ../drush-backups/drushdump.sql
     drush sql-dump --result-file=PATH/TO/BACKUP/DIR/DBNAME_`date +"%m_%d_%Y-%H:%M"`.sql
 
-On Vagrant VM
+### On Vagrant VM
 
 ```
 Vagrant ssh
