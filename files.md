@@ -17,10 +17,8 @@ rsync -r files/. \[SSH-URL\]:public/sites/default/files/
 \# to sync from local to remote, not delete files not present on remote
 
 ```
-rsync -r --delete files/. hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh:web/sites/default/files/
+rsync -r files/. [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh:web/sites/default/files/
 ```
-
-rsync -r files/. hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh:web/sites/default/files/
 
 \# to sync form local to remote, delete files on remote not present in local
 
@@ -31,15 +29,15 @@ rsync -r --delete files/. hne3vvou3repg-dev001-hcarzeq@ssh.us.platform.sh:web/si
 ### with drush
 
 ```
-drush rsync @platform.\_local:%files @platform.master:%files
+drush rsync @platform.\_local:%files @platform.MY-BRANCH:%files
 ```
 
 ```
-drush rsync @self:%files @drupal.dev001:%files
+drush rsync @self:%files @drupal.MY-BRANCH:%files
 ```
 
 ```
-drush rsync -s --delete @self:%files @drupal.dev001:%files
+drush rsync -s --delete @self:%files @drupal.MY-BRANCH:%files
 ```
 
 
