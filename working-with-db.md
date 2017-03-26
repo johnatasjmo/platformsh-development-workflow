@@ -12,9 +12,9 @@ using sql-sync on local root or vagrant VM
 
 ```
 drush sql-sync @source @target
-drush sql-sync @platform.master @platform.\_local
+drush sql-sync @platform.MASTER @platform.\_local
 drush sql-sync @self  @drupal.dev001
-drush sql-sync @drupal.dev001 @self
+drush sql-sync @drupal.MY-BRANCH @self
 ```
 
 ### with Drush sql-dump
