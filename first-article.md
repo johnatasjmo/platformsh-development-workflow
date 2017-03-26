@@ -27,13 +27,13 @@ git status
 ##### Pull DB
 
 ```
-drush sql-sync @master-branch @self -y && drush cr
+drush sql-sync @MASTER-BRANCH @self -y && drush cr
 ```
 
 ##### Pull files
 
 ```
-drush rsync  @drupal.my-branch:%files @self:%files
+drush rsync  @drupal.MY-BRANCH:%files @self:%files
 ```
 
 ##### Code and commit

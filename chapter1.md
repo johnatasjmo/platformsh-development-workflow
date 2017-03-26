@@ -54,7 +54,7 @@ Get the bitbucket url
 On local machine
 
 ```
-git remote add bitbucket https://avalanchaa@bitbucket.org/avalanchaa/couriersh.git
+git remote add bitbucket https://USERNAME@bitbucket.org/USERNAME/REPO.git
 git remote -v
 ```
 
