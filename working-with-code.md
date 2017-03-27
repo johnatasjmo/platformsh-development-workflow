@@ -46,5 +46,11 @@ On local machine with config-merge \(testing\)
 drush @drupal.MY-BRANCH config-merge @self --git --branch=export
 ```
 
+Install module
+
+```
+composer require drupal/<modulename>
+```
+
 
 
