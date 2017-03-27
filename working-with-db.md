@@ -19,7 +19,7 @@ drush sql-sync @drupal.MY-BRANCH @self
 
 ### with Drush sql-dump
 
-    ssh b5ciwn3jjhwsg-dev001-hcarzeq@ssh.us.platform.sh  
+    ssh [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh 
     cd web  
     drush sql-dump &gt; ../drush-backups/drushdump.sql
     drush sql-dump --result-file=PATH/TO/BACKUP/DIR/DBNAME_`date +"%m_%d_%Y-%H:%M"`.sql
@@ -28,7 +28,7 @@ drush sql-sync @drupal.MY-BRANCH @self
 
 ```
 Vagrant ssh
-scp b5ciwn3jjhwsg-dev001-hcarzeq@ssh.us.platform.sh:~/drush-backups/drushdump.sql ~/sites/
+scp [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh:~/drush-backups/drushdump.sql ~/sites/
 ```
 
 ### with Sequel Pro
