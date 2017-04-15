@@ -6,7 +6,7 @@ Follow instructions as per[https://www.drupalvm.com/](https://www.drupalvm.com/)
 
 ### platform.sh
 
-Create an account on[https://platform.sh/](https://platform.sh/)and initiate a project
+Create an account on [https://platform.sh/](https://platform.sh/)and initiate a project
 
 On local machine
 
