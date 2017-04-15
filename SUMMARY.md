@@ -6,6 +6,6 @@
 * [Working with code](working-with-code.md)
 * [Working with files](files.md)
 * [Working with DB](working-with-db.md)
-* [Resources](resources.md)
 * [Behat](behat.md)
+* [Resources](resources.md)
 
