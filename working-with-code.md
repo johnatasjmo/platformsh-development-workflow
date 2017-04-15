@@ -20,8 +20,13 @@ platform integration:update [PROJECT-ID] --fetch-branches true
 
 ### Merge a branch
 
-* After CHILD-BRANCH is created, go to bitbucket and create a pull request
+After CHILD-BRANCH is created and tested:
+
+* Go to bitbucket and create a pull request
+* Approve pull request
 * Merge the pull request on bitbucket and platform will deploy changes on platform.sh and rebuild
+* Test that branch works
+* On local, delete the branch and push changes to bitbucket, this will make the branch to be deleted in platform
 
 ### Delete a branch
 
