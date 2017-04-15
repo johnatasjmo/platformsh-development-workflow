@@ -1,4 +1,4 @@
-# Web development in Drupal 8 with platform.sh
+# Web development in Drupal 8 with platform.sh 8
 
 change of user, new update
 
