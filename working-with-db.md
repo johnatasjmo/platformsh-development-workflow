@@ -6,6 +6,7 @@ Get your drush aliases
 
 ```
 local:drush-aliases
+drush sa
 ```
 
 using sql-sync on local root or vagrant VM
@@ -33,12 +34,16 @@ scp [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh:~/drush-backups/drushdump.sql ~/
 
 ### with Sequel Pro
 
-Platform tunnel
+Before connecting to platform, you must open a tunnel
 
 ```
-platform tunnel:info -e dev001
+platform tunnel:info -e BRANCH
 platform tunnel:list
+platform tunnel:open
 ```
+
+* Export DB from platform
+* Import DB into local host
 
 
 

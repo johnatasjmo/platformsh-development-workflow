@@ -4,17 +4,24 @@
 
 ```bash
 platform environment:checkout PARENT-BRANCH // checkout parent branch
-platform  // check which branch are you in parent-branch
-platform environment:branch CHILD-BRANCH //creates a new branch as child of parent (1 min process)
+platform branch CHILD-BRANCH //creates a new branch as child of parent (1 min process)
 git commit --allow-empty -m "branch created" // bookmark
 git push bitbucket // this push a new commit to bitbucket and you can see changes on bitbucket and platform are linked
-git branch -u bitbucket/CHILD-BRANCH
-platform snapshot:create
+git branch -u bitbucket/CHILD-BRANCH // track bitbucket as upstream
+platform snapshot:create // just in case you need to revert to a clean branch
+```
+
+Set up required on platform.sh for future merges and pull requests
+
+```
+platform integration:update [PROJECT-ID] --build-pull-requests false
+platform integration:update [PROJECT-ID] --fetch-branches true
 ```
 
 ### Merge a branch
 
-XXXXX?????XXXXXX
+* After CHILD-BRANCH is created, go to bitbucket and create a pull request
+* Merge the pull request on bitbucket and platform will deploy changes on platform.sh and rebuild
 
 ### Delete a branch
 
@@ -39,16 +46,24 @@ git push bitbucket
 platform snapshot:create
 ```
 
-On local machine with config-merge \(testing\)
+On local machine with config-merge \(testing\) \*\*\*\*\*\*\*\*\*\*
 
 ```
 drush @drupal.MY-BRANCH config-merge @self --git --branch=export
 ```
 
-Install module
+# Composer
+
+### Install a module
 
 ```
 composer require drupal/<modulename>
+```
+
+### Update a module
+
+```
+composer update drupal/<modulename>
 ```
 
 
