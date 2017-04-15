@@ -14,7 +14,6 @@ On local machine
 platform get \[project-id\] \[folder-name\]
 cd drupal
 platform build
-
 ```
 
 create local.settings.php and add drupal VM credentials
@@ -25,7 +24,6 @@ add hash by going to vagrant ssh and type
 drush cget system.site
 
 get default\_config\_hash code and copy
-
 ```
 
 Copy contents to settings.local.php
@@ -33,28 +31,15 @@ Copy contents to settings.local.php
     `settings['hash_salt'] = 'myhash';        
     config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';` 
 
-
 > note You should never commit a settings.local.php file to your repository. The file will always be overwritten by Platform.sh \(when using the drupal build flavor\).
 
 ### Platform CLI in Vagrant VM
 
 ```
-  vagrant ssh
-  
-cd
- home/vagrant
-  curl -sS https://platform.sh/cli/installer 
-|
- php
-  chmod 777 .platformsh
-  curl -sS https://platform.sh/cli/installer 
-|
- php
-  
-source
-~
-/.profile
-  platform
+vagrant ssh
+cd home/vagrant
+curl -sS https://platform.sh/cli/installer
+platform
 ```
 
 ### Bitbucket
@@ -68,7 +53,6 @@ On local machine
 ```
 git remote add bitbucket https://USERNAME@bitbucket.org/USERNAME/REPO.git
 git remote -v
-
 ```
 
 ### platform.sh and Bitbucket integration

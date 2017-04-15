@@ -7,4 +7,5 @@
 * [Working with DB](working-with-db.md)
 * [Resources](resources.md)
 * [Workflow](workflow.md)
+* [Behat](behat.md)
 
