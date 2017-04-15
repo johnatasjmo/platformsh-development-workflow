@@ -2,13 +2,17 @@
 
 ### As Senior developer
 
-1. Create a Master Branch
-2. Create a Test Branch
-3. Create a User-Story from Test Branch and assign to developer
+1. Create a branch from master for each user story \(i.e. US-1\)
+2. Create pull request on bitbucket
+3. After developer finished coding, merge pull request
+4. Delete user story \(US-1\)
 
 ### As Developer
 
-Once user story is assigned, identify the branch
+1. Pull user story locally \(US-1\)
+2. work, commit
+3. Rebase, notify that branch is ready for testing
+4. Push to bitbucket
 
 ##### Checkout
 
