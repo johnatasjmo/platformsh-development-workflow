@@ -16,7 +16,28 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    create a file named behat.yml and add it to web app root with the following code
 
 3. ```
-
+   default:
+     suites:
+       default:
+         contexts:
+           - FeatureContext
+           - Drupal\DrupalExtension\Context\DrupalContext
+           - Drupal\DrupalExtension\Context\MinkContext
+     extensions:
+       Behat\MinkExtension:
+         goutte: ~
+         selenium2: ~
+         #only on dev001
+         base_url: https://baseurl.com
+       Drupal\DrupalExtension:
+         blackbox: ~
+         api_driver: 'drupal' 
+         drush:
+           alias: 'local'
+         drupal: 
+           drupal_root: 'web' 
+         region_map:
+           footer: "#footer"
    ```
 4. drupal-extension
    ```
@@ -24,27 +45,13 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    composer require guzzlehttp/guzzle
    composer config bin-dir
    ```
-5. behat --init, be sure folders are created
+5. behat --init, be sure folders are created and download commands
    ```
    behat --ini
-   ```
-6. add a feature  
-   Add a simple feature, copy content of below code and save it into /features folder as .yml
-
-7. ```
-
-   ```
-8. behat -dl
-
+   behatndor/bin/
    ```
 
-   ```
 
-9. run vendor/bin/behat
-
-   ```
-
-   ```
 
 Features as shared
 
