@@ -1,4 +1,4 @@
-# Behat testing on platform sh
+Behat testing on platform sh
 
 Instructions are similar to the ones on [behat drupal extension](https://behat-drupal-extension.readthedocs.io/en/3.1/localinstall.html)
 
@@ -48,7 +48,7 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
 5. behat --init, be sure folders are created and download commands
    ```
    behat --ini
-   behatndor/bin/
+   behat =dl
    ```
 
 
@@ -56,13 +56,33 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
 Features as shared
 
 * modify .platform.yml file and add features folder as a mount file
-* on app root type 
+
+```
+mounts:
+    '/features': 'shared:files/features'
+```
+
+Add a feature
+
+Save the following file as homepage.feature
+
+```
+Feature: Test DrupalContext
+  In order to prove the Behat is working correctly in Drupal VM
+  As a developer
+  I need to run a simple interface test
+
+  Scenario: Viewing homepage
+    Given I am on the homepage
+    Then I should see "Welcome to Drupal"
 
 ```
 
+Testing
+
+```
+behat
 ```
 
-Testing locally
 
-Testing on server
 
