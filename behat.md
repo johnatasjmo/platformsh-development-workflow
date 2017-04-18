@@ -51,8 +51,6 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    behat =dl
    ```
 
-
-
 Features as shared
 
 * modify .platform.yml file and add features folder as a mount file
@@ -75,13 +73,24 @@ Feature: Test DrupalContext
   Scenario: Viewing homepage
     Given I am on the homepage
     Then I should see "Welcome to Drupal"
-
 ```
 
-Testing
+#### Writing a test
+
+Pull code and db locally and create scenarios saved as file.feature then test
 
 ```
+cd behat/config
 behat
+```
+
+#### Test on platform.sh
+
+behat.yml file has a profile for dev001 environment and can be run as:
+
+```
+cd behat/config
+behat --profile dev001
 ```
 
 

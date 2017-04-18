@@ -26,7 +26,7 @@ drush cget system.site
 get default\_config\_hash code and copy
 ```
 
-Copy contents to settings.local.php
+Copy contents to settings.local.php under web/sites/default
 
     `settings['hash_salt'] = 'myhash';        
     config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';` 
@@ -41,6 +41,8 @@ cd home/vagrant
 curl -sS https://platform.sh/cli/installer
 platform
 ```
+
+> If you don't have Vagrant, SSH into your virtual machine
 
 ### Bitbucket
 

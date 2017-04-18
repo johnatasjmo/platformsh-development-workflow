@@ -5,7 +5,7 @@
 Get your drush aliases
 
 ```
-local:drush-aliases
+platform local:drush-aliases
 drush sa
 ```
 
@@ -22,7 +22,7 @@ drush sql-sync @drupal.MY-BRANCH @self
 
     ssh [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh 
     cd web  
-    drush sql-dump &gt; ../drush-backups/drushdump.sql
+    drush sql-dump --result-file=../drush-backups/couriertms_`date +"%m_%d_%Y-%H:%M"`.sql
     drush sql-dump --result-file=PATH/TO/BACKUP/DIR/DBNAME_`date +"%m_%d_%Y-%H:%M"`.sql
 
 ### On Vagrant VM
