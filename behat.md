@@ -51,15 +51,6 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    behat -dl
    ```
 
-Features as shared
-
-* modify .platform.yml file and add features folder as a mount file
-
-```
-mounts:
-    '/features': 'shared:files/features'
-```
-
 Add a feature
 
 Save the following file as homepage.feature
