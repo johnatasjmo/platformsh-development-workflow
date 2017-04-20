@@ -48,7 +48,7 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
 5. behat --init, be sure folders are created and download commands
    ```
    behat --ini
-   behat =dl
+   behat -dl
    ```
 
 Features as shared
