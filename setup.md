@@ -38,7 +38,7 @@ Copy contents to settings.local.php under web/sites/default
 ```
 vagrant ssh
 cd home/vagrant
-curl -sS https://platform.sh/cli/installer
+curl -sS https://platform.sh/cli/installer | php
 platform
 ```
 
