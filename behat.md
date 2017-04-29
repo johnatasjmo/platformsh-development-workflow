@@ -57,7 +57,7 @@ cd ~
 ln -s /var/www/drupalvm/drupal/vendor/behat/behat/bin/behat /var/www/drupalvm/drupal/config/behat
 ```
 
-Test that works
+1. Test that works
 
 ```
 cd drupalvm/drupal/config/behat
