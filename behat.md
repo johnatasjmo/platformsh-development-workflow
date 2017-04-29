@@ -1,8 +1,8 @@
-Behat testing on platform sh
+# Behat testing on platform sh
 
 Instructions are similar to the ones on [behat drupal extension](https://behat-drupal-extension.readthedocs.io/en/3.1/localinstall.html)
 
-### Installation
+## Installation
 
 1. Create a separate branch
    ```
@@ -60,9 +60,9 @@ behat --dl
 behat --help
 ```
 
-### Add a feature
+## Add a feature
 
-### Save the following file as homepage.feature
+##### Save the following file as homepage.feature
 
 ```
 Feature: Test DrupalContext
@@ -75,7 +75,7 @@ Feature: Test DrupalContext
     Then I should see "Welcome to Drupal"
 ```
 
-#### Writing a test
+##### Writing a test
 
 Pull code and db locally and create scenarios saved as file.feature then test
 
@@ -84,7 +84,7 @@ cd behat/config
 behat
 ```
 
-#### Test on platform.sh
+##### Test on platform.sh
 
 behat.yml file has a profile for dev001 environment and can be run as:
 
