@@ -8,4 +8,5 @@
 * [Working with DB](working-with-db.md)
 * [Behat](behat.md)
 * [Resources](resources.md)
+* [Coder Sniffer](coder-sniffer.md)
 

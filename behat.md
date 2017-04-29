@@ -10,7 +10,7 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    platform branch behat
    git commit --allow-empty "branch behat created"
    git push bitbucket
-   platform snapshot:cre
+   platform snapshot:create
    ```
 2. Add behat.yml file to application root  
    create a file named behat.yml and add it to web app root with the following code

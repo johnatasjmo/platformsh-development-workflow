@@ -4,6 +4,13 @@
 
 Follow instructions as per[https://www.drupalvm.com/](https://www.drupalvm.com/)and initiate a VM
 
+Add a symbolic link on home
+
+```
+vagrant ssh
+ln -s /var/www/drupalvm /home/vagrant
+```
+
 ### platform.sh
 
 Create an account on [https://platform.sh/](https://platform.sh/)and initiate a project
@@ -43,6 +50,8 @@ platform
 ```
 
 > If you don't have Vagrant, SSH into your virtual machine
+
+### 
 
 ### Bitbucket
 
