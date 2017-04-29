@@ -50,10 +50,24 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    behat --ini
    behat -dl
    ```
+6. Add a simlink
 
-Add a feature
+```
+cd ~
+ln -s /var/www/drupalvm/drupal/vendor/behat/behat/bin/behat /var/www/drupalvm/drupal/config/behat
+```
 
-Save the following file as homepage.feature
+Test that works
+
+```
+cd drupalvm/drupal/config/behat
+behat --dl
+behat --help
+```
+
+### Add a feature
+
+### Save the following file as homepage.feature
 
 ```
 Feature: Test DrupalContext
