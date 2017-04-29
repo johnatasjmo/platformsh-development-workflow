@@ -50,16 +50,11 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    behat --ini
    behat -dl
    ```
-6. Add a simlink
+6. Add a simlink and test that works
 
 ```
 cd ~
 ln -s /var/www/drupalvm/drupal/vendor/behat/behat/bin/behat /var/www/drupalvm/drupal/config/behat
-```
-
-1. Test that works
-
-```
 cd drupalvm/drupal/config/behat
 behat --dl
 behat --help
