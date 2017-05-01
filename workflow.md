@@ -17,15 +17,16 @@
 ##### Checkout
 
 ```
-platform environment:syncronize
+git checkout WORKINGBRANCH
 platform tunnel:open
 ```
 
 ##### Pull code
 
 ```
-platform local:build
+git pull branch
 git status
+platform buil
 ```
 
 ##### Pull DB
@@ -55,10 +56,17 @@ git add -A
 git  commit -m "configuration exported"
 ```
 
+##### Rebase
+
+```
+git rebase -i bb/master
+```
+
 ##### Push
 
 ```
 platform snapshot:create
+git commit --allow-empty -m "branch ready to merge"
 git push bitbucket
 platform snapshot:create
 ```

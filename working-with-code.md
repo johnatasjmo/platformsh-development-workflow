@@ -5,7 +5,7 @@
 ```bash
 platform environment:checkout PARENT-BRANCH // checkout parent branch
 platform branch CHILD-BRANCH //creates a new branch as child of parent (1 min process)
-git commit --allow-empty -m "branch created" // bookmark
+ // bookmark
 git push bitbucket // this push a new commit to bitbucket and you can see changes on bitbucket and platform are linked
 git branch -u bitbucket/CHILD-BRANCH // track bitbucket as upstream
 platform snapshot:create // just in case you need to revert to a clean branch
@@ -24,11 +24,7 @@ After CHILD-BRANCH is created and tested:
 
 * Go to bitbucket and create a pull request
 * Approve pull request
-* Merge the pull request on bitbucket and platform will deploy changes on platform.sh and rebuild
-* Test that branch works
-* On local, delete the branch and push changes to bitbucket, this will make the branch to be deleted in platform
-
-### Delete a branch
+* Merge the pull request on bitbucket
 
 On local machine, the following code force deletes a local branch and pushes to bitbucket
 
