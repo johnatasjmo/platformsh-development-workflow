@@ -80,7 +80,6 @@ Feature: Test DrupalContext
 Pull code and db locally and create scenarios saved as file.feature then test
 
 ```
-cd behat/config
 behat
 ```
 
@@ -89,8 +88,7 @@ behat
 behat.yml file has a profile for dev001 environment and can be run as:
 
 ```
-cd behat/config
-behat --profile dev001
+behat --profile master
 ```
 
 

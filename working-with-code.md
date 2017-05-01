@@ -53,25 +53,7 @@ On local machine with config-merge \(testing\) \*\*\*\*\*\*\*\*\*\*
 drush @drupal.MY-BRANCH config-merge @self --git --branch=export
 ```
 
-# Composer
-
-#### Install a module
-
-```
-composer require drupal/<modulename>
-```
-
-#### Update a module
-
-```
-composer update drupal/<modulename>
-```
-
-#### Remove a module
-
-```
-composer remove drupal/<modulename>
-```
+# 
 
 
 

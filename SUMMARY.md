@@ -9,4 +9,5 @@
   * [Working with DB](working-with-db.md)
 * [Coder Sniffer](coder-sniffer.md)
 * [Behat](behat.md)
+* [Composer](composer.md)
 
