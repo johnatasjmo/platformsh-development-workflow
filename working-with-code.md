@@ -5,7 +5,7 @@
 ```bash
 platform environment:checkout PARENT-BRANCH // checkout parent branch
 platform branch CHILD-BRANCH //creates a new branch as child of parent (1 min process)
- // bookmark
+git --allow-empty -m "branch created" // bookmark
 git push bitbucket // this push a new commit to bitbucket and you can see changes on bitbucket and platform are linked
 git branch -u bitbucket/CHILD-BRANCH // track bitbucket as upstream
 platform snapshot:create // just in case you need to revert to a clean branch

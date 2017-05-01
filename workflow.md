@@ -9,7 +9,7 @@
 
 ### As Developer
 
-1. Pull user story locally \(US-1\)
+1. Pull user story locally \(US-1\). Pull code, pull DB, build environment with platform build
 2. work, commit
 3. Rebase, notify that branch is ready for testing
 4. Push to bitbucket
@@ -24,9 +24,7 @@ platform tunnel:open
 ##### Pull code
 
 ```
-git pull branch
-git status
-platform buil
+git pull bitbucket WORKINGBRANCH
 ```
 
 ##### Pull DB
@@ -39,6 +37,12 @@ drush sql-sync @MASTER-BRANCH @self -y && drush cr
 
 ```
 drush rsync  @drupal.MY-BRANCH:%files @self:%files
+```
+
+##### Build the environment locally
+
+```
+platform build
 ```
 
 ##### Code and commit
@@ -59,17 +63,22 @@ git  commit -m "configuration exported"
 ##### Rebase
 
 ```
-git rebase -i bb/master
+git rebase -i bitbucket/master
 ```
 
 ##### Push
 
 ```
 platform snapshot:create
-git commit --allow-empty -m "branch ready to merge"
 git push bitbucket
 platform snapshot:create
 ```
+
+### Merge a branch by Senior Developer
+
+* On bitbucket, create a pull request and approve it
+* On bitbucket, merge the pull request
+* Delete branch from bitbucket
 
 
 
