@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Platformsh]
+* [Platformsh] (platformsh.md)
 	* [Setup](setup.md)
 	* [Workflow](workflow.md)
 	* [Working with code](working-with-code.md)
