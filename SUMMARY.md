@@ -7,6 +7,6 @@
   * [Working with code](working-with-code.md)
   * [Working with files](files.md)
   * [Working with DB](working-with-db.md)
-* [Behat](behat.md)
 * [Coder Sniffer](coder-sniffer.md)
+* [Behat](behat.md)
 
