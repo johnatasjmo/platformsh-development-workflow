@@ -2,7 +2,7 @@
 
 ### Drupal VM
 
-Follow instructions as per[https://www.drupalvm.com/](https://www.drupalvm.com/)and initiate a VM
+Follow instructions as per [https://www.drupalvm.com/](https://www.drupalvm.com/)and initiate a VM
 
 Add a symbolic link on home
 
@@ -52,8 +52,6 @@ Copy contents to settings.local.php under web/sites/default
     config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';` 
 
 > note You should never commit a settings.local.php file to your repository. The file will always be overwritten by Platform.sh \(when using the drupal build flavor\).
-
-
 
 ## Bitbucket
 
