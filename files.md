@@ -2,7 +2,7 @@
 
 Recommendation, put files on master branch and sync back to developing branches using platform sync bottom.
 
-![](/assets/Screen Shot 2017-05-06 at 12.58.14 AM.png)(width="100")
+![](/assets/Screen Shot 2017-05-06 at 12.58.14 AM.png=100)
 
 ### With RSYNC
 
