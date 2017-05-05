@@ -10,5 +10,5 @@
 * [Coder Sniffer](coder-sniffer.md)
 * [Behat](behat.md)
 * [Composer](composer.md)
-* [libraries](libraries.md)
+* [Libraries](libraries.md)
 
