@@ -4,19 +4,20 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
 
 ## Installation
 
-1. Create a separate branch
-   ```
-   platform checkout PARENT-BRANCH
-   platform branch behat
-   git commit --allow-empty "branch behat created"
-   git push bitbucket
-   platform snapshot:create
-   ```
-2. Add behat.yml file to application root  
-   create a file named behat.yml and add it to web app root with the following code. Add base\_url for specific environments
+##### Create a separate branch
 
-3. ```
-   default:
+```
+platform branch behat
+git commit --allow-empty "branch behat created"
+git push bitbucket
+platform snapshot:create
+```
+
+##### Add behat.yml file to application root
+
+create a file named behat.yml and add it to web app root with the following code. Add base\_url for specific environments
+
+1. ```
      suites:
        default:
          contexts:
@@ -39,23 +40,29 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
            footer: "#footer"
    ```
 
-1. fasdf
+##### add a bash
+
+on platform.sh root folder .environment, add the following command which will create a base\_url for each branch created. In this way, we can run behat on every branch without the need of change base
 
 1. ```
 
    ```
-2. drupal-extension
-   ```
-   composer require drupal/drupal-extension
-   composer require guzzlehttp/guzzle
-   composer config bin-dir
-   ```
-3. behat --init, be sure folders are created and download commands
-   ```
-   behat --ini
-   behat -dl
-   ```
-4. Add a simlink and test that works
+
+##### drupal-extension
+
+```
+composer require guzzlehttp/guzzle
+composer config bin-dir
+```
+
+##### run behat --init
+
+```
+behat --ini
+behat -dl
+```
+
+##### Add a simlink and test that works
 
 ```
 cd ~
