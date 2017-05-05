@@ -1,7 +1,5 @@
 # Working with files
 
-Recommendation, put files on master branch and sync back to developing branches using platform sync bottom.
-
 ### With RSYNC
 
 ```
@@ -28,6 +26,8 @@ rsync -r files/. [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh:web/sites/default/f
 rsync -r --delete files/. [PROJECT-ID]-[ENV]@ssh.[REGION].platform.sh:web/sites/default/files/
 ```
 
+### 
+
 ### with drush
 
 ```
@@ -42,9 +42,9 @@ drush rsync @self:%files @drupal.MY-BRANCH:%files
 drush rsync -s --delete @self:%files @drupal.MY-BRANCH:%files
 ```
 
+### 
 
-
-##### After files are on master branch, sync them to child-branches as needed
+### After files are on master branch, sync them to child-branches as needed
 
 ![](/assets/sync.png)
 
