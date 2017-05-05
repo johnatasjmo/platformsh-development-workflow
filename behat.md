@@ -13,9 +13,9 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
    platform snapshot:create
    ```
 2. Add behat.yml file to application root  
-   create a file named behat.yml and add it to web app root with the following code
+   create a file named behat.yml and add it to web app root with the following code. Add base\_url for specific environments
 
-3. ```
+1. ```
    default:
      suites:
        default:
@@ -27,8 +27,7 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
        Behat\MinkExtension:
          goutte: ~
          selenium2: ~
-         #only on dev001
-         base_url: https://baseurl.com
+         #base_url: https://baseurl.com
        Drupal\DrupalExtension:
          blackbox: ~
          api_driver: 'drupal' 
@@ -38,6 +37,10 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
            drupal_root: 'web' 
          region_map:
            footer: "#footer"
+   ```
+2. fasdf
+3. ```
+
    ```
 4. drupal-extension
    ```
@@ -59,6 +62,12 @@ cd drupalvm/drupal/config/behat
 behat --dl
 behat --help
 ```
+
+
+
+
+
+
 
 ## Add a feature
 
