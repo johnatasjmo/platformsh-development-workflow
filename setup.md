@@ -57,7 +57,7 @@ Copy contents to settings.local.php under web/sites/default
 
 Create an account on [https://bitbucket.org/](https://bitbucket.org/)and an empty repo
 
-Get the bitbucket url
+Get bitbucket url
 
 ##### On local machine
 
