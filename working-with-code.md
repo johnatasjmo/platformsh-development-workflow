@@ -40,7 +40,6 @@ On local machine
 ```
 drush cex -y
 git add -A
-git add./ #optional
 git  commit -m "configuration exported"
 platform snapshot:create
 git push bitbucket
