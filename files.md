@@ -1,5 +1,9 @@
 # Working with files
 
+Recommendation, put files on master branch and sync back to developing branches using platform sync bottom.
+
+![](/assets/Screen Shot 2017-05-06 at 12.58.14 AM.png)
+
 ### With RSYNC
 
 ```
