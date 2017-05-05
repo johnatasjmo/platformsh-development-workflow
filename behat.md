@@ -42,11 +42,13 @@ create a file named behat.yml and add it to web app root with the following code
 
 ##### add a bash
 
-on platform.sh root folder .environment, add the following command which will create a base\_url for each branch created. In this way, we can run behat on every branch without the need of change base
+on platform.sh root folder .environment, add the following command which will create a base\_url for each branch created. In this way, we can run behat on every branch without the need of change base\_url 
 
-1. ```
-
-   ```
+```
+#export parameters to behat.yml by jmo 
+export BEHAT_PARAMS='{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://'$PLATFORM_ENVIRONMENT'-'$PLATFORM_PROJECT'.us.platform.sh/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "alias":  "@drupal.'$PLATFORM_BRANCH'" }}}}'
+cd ~ && behat --config=behat.yml "$@"
+```
 
 ##### drupal-extension
 
@@ -95,12 +97,11 @@ Pull code and db locally and create scenarios saved as file.feature then test
 behat
 ```
 
-##### Test on platform.sh
-
-behat.yml file has a profile for dev001 environment and can be run as:
+##### Test on platform.sh or local app root
 
 ```
-behat --profile master
+platform build
+behat
 ```
 
 
