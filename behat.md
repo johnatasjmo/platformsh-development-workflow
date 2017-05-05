@@ -96,5 +96,5 @@ platform build
 behat
 ```
 
-
+Push code to platform.sh and run $behat. If all works, merge the branch into master
 
