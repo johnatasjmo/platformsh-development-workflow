@@ -42,7 +42,7 @@ create a file named behat.yml and add it to web app root with the following code
 
 ##### add a bash
 
-on platform.sh root folder .environment, add the following command which will create a base\_url for each branch created. In this way, we can run behat on every branch without the need of change base\_url 
+on platform.sh root folder .environment, add the following command which will create a base\_url for each branch created. In this way, we can run behat on every branch without the need of change base\_url
 
 ```
 #export parameters to behat.yml by jmo 
@@ -76,7 +76,7 @@ behat --help
 
 ## Add a feature
 
-##### Save the following file as homepage.feature
+##### Save the following file as homepage.feature inside features folder
 
 ```
 Feature: Test DrupalContext
@@ -87,14 +87,6 @@ Feature: Test DrupalContext
   Scenario: Viewing homepage
     Given I am on the homepage
     Then I should see "Welcome to Drupal"
-```
-
-##### Writing a test
-
-Pull code and db locally and create scenarios saved as file.feature then test
-
-```
-behat
 ```
 
 ##### Test on platform.sh or local app root
