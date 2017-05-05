@@ -2,8 +2,6 @@
 
 Recommendation, put files on master branch and sync back to developing branches using platform sync bottom.
 
-![](/assets/Screen Shot 2017-05-06 at 12.58.14 AM.png)
-
 ### With RSYNC
 
 ```
@@ -45,4 +43,8 @@ drush rsync -s --delete @self:%files @drupal.MY-BRANCH:%files
 ```
 
 
+
+##### After files are on master branch, sync them to child-branches as needed
+
+![](/assets/sync.png)
 
