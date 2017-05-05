@@ -76,9 +76,10 @@ platform snapshot:create
 
 ### Merge a branch by Senior Developer
 
-* On bitbucket, create a pull request and approve it
+* On bitbucket, create a pull request
+* Review code, approve it
 * On bitbucket, merge the pull request
-* Delete branch from bitbucket
+* Delete branch from bitbucket, local and platform
 
 
 
