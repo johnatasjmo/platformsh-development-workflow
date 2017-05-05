@@ -15,7 +15,7 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
 2. Add behat.yml file to application root  
    create a file named behat.yml and add it to web app root with the following code. Add base\_url for specific environments
 
-1. ```
+3. ```
    default:
      suites:
        default:
@@ -38,22 +38,24 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
          region_map:
            footer: "#footer"
    ```
-2. fasdf
-3. ```
+
+1. fasdf
+
+1. ```
 
    ```
-4. drupal-extension
+2. drupal-extension
    ```
    composer require drupal/drupal-extension
    composer require guzzlehttp/guzzle
    composer config bin-dir
    ```
-5. behat --init, be sure folders are created and download commands
+3. behat --init, be sure folders are created and download commands
    ```
    behat --ini
    behat -dl
    ```
-6. Add a simlink and test that works
+4. Add a simlink and test that works
 
 ```
 cd ~
@@ -62,12 +64,6 @@ cd drupalvm/drupal/config/behat
 behat --dl
 behat --help
 ```
-
-
-
-
-
-
 
 ## Add a feature
 
