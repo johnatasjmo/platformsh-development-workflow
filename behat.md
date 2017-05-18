@@ -47,7 +47,6 @@ on platform.sh root folder .environment, add the following command which will cr
 ```
 #export parameters to behat.yml by jmo 
 export BEHAT_PARAMS='{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://'$PLATFORM_ENVIRONMENT'-'$PLATFORM_PROJECT'.us.platform.sh/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "alias":  "@drupal.'$PLATFORM_BRANCH'" }}}}'
-cd ~ && behat --config=behat.yml "$@"
 ```
 
 ##### drupal-extension
