@@ -68,7 +68,7 @@ git remote -v
 
 ##### Add SSH keys on virtual machine
 
-Login into VM with vagrant ssh and follow the instructions on
+Login into VM with vagrant ssh and follow the instructions on. You need to do this process twice, one logged from local drupalVM and other from your local machine. Therefore, bitbucket will have two keys under account/settings
 
 [https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html)
 
