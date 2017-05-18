@@ -66,6 +66,12 @@ git remote add bitbucket https://USERNAME@bitbucket.org/USERNAME/REPO.git
 git remote -v
 ```
 
+##### Add SSH keys on virtual machine
+
+Login into VM with vagrant ssh and follow the instructions on
+
+[https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html)
+
 ##### platform.sh and Bitbucket integration
 
 Go to bitbucket and add platform sh as integration and select your new project
