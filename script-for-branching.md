@@ -1,16 +1,15 @@
-Scritps
+# Scritps
 
-Script for create a local branch
+### Script for create a local branch
 
-Add a file named branching.sh with below code into project root /drupal
-
-From drupalVM type the new branch name you would like to create. Example: child-branch
+1. Add a file named branching.sh with below code into project root /drupal
+2. From drupalVM type the new branch name you would like to create. Example: child-branch
 
 ```
 $sh branching child-branch
 ```
 
-Script
+##### Script
 
     #!/bin/bash
     # Scritp to branch from platform master, create a local branch, pull db
