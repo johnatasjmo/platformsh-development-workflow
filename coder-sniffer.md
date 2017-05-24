@@ -41,7 +41,7 @@ phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile
 ##### check file
 
 ```
-phpcs --standard=Drupal example.module
+phpcs --standard=Drupal web/modules/custom/aftership_entity.module
 ```
 
 ##### correct file
