@@ -50,7 +50,7 @@ $sh branching child-branch
     echo "*** starting build"
     platform build
     echo "*** finishing build"
-    drush cr @drupal._local
+    drush @drupal._local cr
     TIMESTAMP=`date "+%Y-%m-%d %H:%M:%S"`
     echo "$TIMESTAMP"
     echo "*** branch created in local, bitbucket and platform"
