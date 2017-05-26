@@ -11,4 +11,5 @@
 * [Composer](composer.md)
 * [Libraries](libraries.md)
 * [Scripts](script-for-branching.md)
+* [Drupal console](drupal-console.md)
 
