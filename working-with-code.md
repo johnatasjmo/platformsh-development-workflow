@@ -52,7 +52,21 @@ On local machine with config-merge \(testing\) \*\*\*\*\*\*\*\*\*\*
 drush @drupal.MY-BRANCH config-merge @self --git --branch=export
 ```
 
-# 
+### Troubleshooting
+
+##### Clean local repo from ignored files
+
+```
+ git clean -df
+```
+
+##### Clear cache
+
+```
+git rm -r --cached .
+git add .
+git commit -m ".gitignore is now working"
+```
 
 
 
