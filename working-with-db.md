@@ -45,7 +45,9 @@ platform tunnel:open
 * Export DB from platform
 * Import DB into local host
 
-Troubleshooting
+### Troubleshooting
+
+##### Entities not deleted upon module uninstall
 
 If facing `drush updb` error
 
