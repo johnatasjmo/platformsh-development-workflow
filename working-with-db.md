@@ -45,5 +45,13 @@ platform tunnel:open
 * Export DB from platform
 * Import DB into local host
 
+Troubleshooting
+
+If facing \`drush updb\` error
+
+```
+drush sql-query "DELETE FROM key_value WHERE collection='system.schema' AND name='courier_core';"
+```
+
 
 
