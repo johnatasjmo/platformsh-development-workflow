@@ -56,5 +56,44 @@ $sh branching child-branch
     echo "*** branch created in local, bitbucket and platform"
     echo "*** branching finished ***"
 
+### Script for automatic snapshots
+
+Follow the next steps for creating automatic snapshots
+
+* Create an EC2 instance
+* Install php on EC2
+* Install git on EC2
+* Install platform on EC2 and use `platform get` to get the project
+
+Save this file on /home/ec2-user and name it script.sh
+
+```
+cd  /home/ec2-user/drupal/web
+~/.platformsh/bin/platform checkout master
+~/.platformsh/bin/platform snapshot:create
+```
+
+make script executable
+
+```
+$ chmod a+x script.sh
+```
+
+set cron to run
+
+```
+$ crontab -e
+```
+
+Edit the file with the following commands
+
+```
+*****test every 5 min
+*/5 * * * * /bin/bash /home/ec2-user/script.sh >> /var/tmp/out.log 2>&1
+
+*** every 3 hours ****
+0 */3 * * * /bin/bash /home/ec2-user/script.sh >> /var/tmp/out.log 2>&1
+```
+
 
 
