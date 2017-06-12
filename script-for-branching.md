@@ -56,11 +56,11 @@ $sh branching child-branch
     echo "*** branch created in local, bitbucket and platform"
     echo "*** branching finished ***"
 
-### Script for automatic snapshots
+### Script for automatic snapshots using AWS EC2 nano instance
 
 Follow the next steps for creating automatic snapshots
 
-* Create an EC2 instance
+* Create an EC2 instance as nano instance
 * Install php on EC2
 * Install git on EC2
 * Install platform on EC2 and use `platform get` to get the project
