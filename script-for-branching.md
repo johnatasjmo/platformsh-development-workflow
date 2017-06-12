@@ -63,9 +63,11 @@ Follow the next steps for creating automatic snapshots
 * Create an EC2 instance as nano instance
 * Install php on EC2
 * Install git on EC2
+* Create a SSH ide
+* Upload SSH id into platform.sh
 * Install platform on EC2 and use `platform get` to get the project
 
-Save this file on /home/ec2-user and name it script.sh
+Create a file on /home/ec2-user and name it script.sh with below code
 
 ```
 cd  /home/ec2-user/drupal/web
@@ -85,7 +87,7 @@ set cron to run
 $ crontab -e
 ```
 
-Edit the file with the following commands
+Edit the file with the following command:
 
 ```
 *****test every 5 min
