@@ -6,9 +6,11 @@ attach a policy
 
 create a bucket
 
+install php
+
+install git
+
 [https://aws.amazon.com/getting-started/tutorials/backup-to-s3-cli/](https://aws.amazon.com/getting-started/tutorials/backup-to-s3-cli/)
-
-
 
 add credentials on platform
 
