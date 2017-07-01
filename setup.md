@@ -4,11 +4,10 @@
 
 Follow instructions as per [https://www.drupalvm.com/](https://www.drupalvm.com/)and initiate a VM
 
-Add a symbolic link on home
+Login to virtual machine
 
 ```
 vagrant ssh
-ln -s /var/www/drupalvm /home/vagrant
 ```
 
 ### platform.sh
