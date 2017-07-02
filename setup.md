@@ -18,7 +18,7 @@ Create an account on [https://platform.sh/](https://platform.sh/)and initiate a 
 
 ```
 vagrant ssh
-cd home/vagrant
+cd ~
 curl -sS https://platform.sh/cli/installer | php
 platform
 ```
