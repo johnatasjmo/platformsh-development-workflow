@@ -4,6 +4,15 @@ Instructions are similar to the ones on [behat drupal extension](https://behat-d
 
 ## Installation
 
+To use javascript, add selenium arknold
+
+```
+cd ~
+sudo ansible-galaxy install arknoll.selenium
+```
+
+## Behat configuration
+
 ##### Create a separate branch
 
 ```
