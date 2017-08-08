@@ -19,5 +19,5 @@ add credentials on platform
  platform variable:set env:AWS_SECRET_ACCESS_KEY asdfasdfasdfasdfasdi
 ```
 
-
+TO DO: add automatic backups in S3 
 
